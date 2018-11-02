@@ -17,18 +17,27 @@ let evilHamburger = {
 }
 
 function punch() {
-  health -= 20
-  document.getElementById("health-status").innerText = health.toString()
+  if (health >= 20) {
+    health -= 20
+    document.getElementById("health-status").innerText = health.toString()
+  }
+  endGame();
 }
 
 function kick() {
-  health -= 20
-  document.getElementById("health-status").innerText = health.toString()
+  if (health >= 20) {
+    health -= 20
+    document.getElementById("health-status").innerText = health.toString()
+  }
+  endGame();
 }
 
 function slap() {
-  health -= 10
-  document.getElementById("health-status").innerText = health.toString()
+  if (health >= 10) {
+    health -= 10
+    document.getElementById("health-status").innerText = health.toString()
+  }
+  endGame();
 }
 
 function tomato() {
@@ -53,4 +62,9 @@ function update() {
 function reset() {
   health = 100
   document.getElementById("health-status").innerText = health.toString()
+}
+function endGame() {
+  if (health <= 0) {
+    document.getElementById("end-game").innerText = "end game"
+  }
 }
