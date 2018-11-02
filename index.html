@@ -31,16 +31,33 @@
 
       <div class="container2">
         <div class="row attack-buttons">
-          <button onclick="app.controllers.slapController.attack(0, 'punch')" type="button" class="btn btn-secondary btn-lg">Punch</button>
-          <button onclick="app.controllers.slapController.attack(0, 'slap')" type="button" class="btn btn-secondary btn-lg">Slap</button>
-          <button onclick="app.controllers.slapController.attack(0, 'kick')" type="button" class="btn btn-secondary btn-lg">Kick</button>
-          <button onclick="app.controllers.slapController.attack(0, 'reset')" type="button" class="btn btn-secondary btn-lg">Reset</button>
+          <button onclick="punch()" type="button" class="btn btn-secondary btn-lg btn-block">Punch</button>
+          <button onclick="slap()" type="button" class="btn btn-secondary btn-lg btn-block">Slap</button>
+          <button onclick="kick()" type="button" class="btn btn-secondary btn-lg btn-block">Kick</button>
+          <button onclick="reset()" type="button" class="btn btn-secondary btn-lg btn-block">Reset</button>
+        </div>
+        <div class="container3">
+          <div class="row attack-buttons2">
+            <button onclick="tomato()" type="button" class="btn btn-secondary btn-md btn-block">Tomato</button>
+            <button onclick="onion()" type="button" class="btn btn-secondary btn-md btn-block">Onion</button>
+            <button onclick="lettuce()" type="button" class="btn btn-secondary btn-md btn-block">Lettuce</button>
+          </div>
+
         </div>
       </div>
+    </div>
 </body>
 
 <footer>
-
+  <div class="container">
+    <div class="row footer">
+      <div class="hits col-md-12" id="hits">
+      </div>
+      <div id="progressbar">
+        <h1 id="health-status"></h1>
+        <div>
+        </div>
+      </div>
 
 </footer>
 

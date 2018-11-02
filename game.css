@@ -3,11 +3,42 @@ background-color: red;
 }
 .container2 {
 position: absolute;
-bottom: 30px;
-margin-left: 40px;
+bottom: 10px;
+margin-left: 25px;
+}
+.container3 {
+position: absolute;
+bottom: 10px;
+margin-left: 400px;
 }
 .nameTitle {
   background-color: lightblue;
   font-size: 50px;
   position: absolute;
+ font-style: italic;
+}
+.hits {
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+  height: 150px;
+margin-left: 600px;
+}
+
+#progressbar {
+  background-color: rgb(40, 201, 241);
+  border-radius: 13px;
+  padding: 3px;
+  position: absolute;
+  bottom: 70px;
+  margin-left: 600px;
+  height: 30px;
+  width: 400px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  height: 20px;
+  border-radius: 10px;
 }
