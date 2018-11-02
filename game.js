@@ -1,7 +1,8 @@
-const title = document.getElementById("title");
-const slaps = document.getElementById("slap-button");
-const kicks = document.getElementById("kick-button");
-const punch = document.getElementById("punch-button");
-const healt = document.getElementById("get health");
+var titleElem = document.getElementById("title");
+var slapsElem = document.getElementById("slap-button");
+var kicksElem = document.getElementById("kick-button");
+var punchElem = document.getElementById("punch-button");
+var healthElem = document.getElementById("get health");
 
-var health = 100
+let health = 100
+
