@@ -5,7 +5,6 @@
 // var healthElem = document.getElementById("get health");
 // var hitsElem = document.getElementById("get-hits")
 
-let health = 100
 
 let evilHamburger = {
   name: "mr. evil",
@@ -13,52 +12,50 @@ let evilHamburger = {
     punch: 0,
     kicks: 0,
     slap: 0,
+    health: 100
   },
+  modifiers: []
+}
+
+function totalItems() {
+  let total = 0
+  for (let i = 0; i < evilHamburger.modifiers.length; i++) {
+    let modifier = evilHamburger.modifiers[i];
+    total += modifier
+  }
+  return total
 }
 
 function punch() {
-  if (health >= 20) {
-    health -= 20
-    document.getElementById("health-status").innerText = health.toString()
-  }
+  evilHamburger.health = 20 + totalItems()
+  document.getElementById("health-status").innerText = evilHamburger.health.toString()
   endGame();
 }
 
 function kick() {
-  if (health >= 10) {
-    health -= 10
-    document.getElementById("health-status").innerText = health.toString()
-  }
+  evilHamburger.health = 10 + totalItems()
+  document.getElementById("health-status").innerText = evilHamburger.health.toString()
   endGame();
 }
 
 function slap() {
-  if (health >= 20) {
-    health -= 20
-    document.getElementById("health-status").innerText = health.toString()
-  }
+  evilHamburger.health = 20 + totalItems()
+  evilHamburger.modifiers.push(-1)
+  document.getElementById("health-status").innerText = evilHamburger.health.toString()
   endGame();
 }
 
 function tomato() {
-  if (health < 100) {
-    health += 5
-    document.getElementById("health-status").innerText = health.toString()
-  }
+  evilHamburger.modifiers.push(-1)
 }
 
+
 function onion() {
-  if (health < 99) {
-    health += 10
-    document.getElementById("health-status").innerText = health.toString()
-  }
+  evilHamburger.modifiers.push(-1)
 }
 
 function lettuce() {
-  if (health < 99) {
-    health += 10
-    document.getElementById("health-status").innerText = health.toString()
-  }
+  evilHamburger.modifiers.push(-1)
 }
 
 function update() {
@@ -66,11 +63,13 @@ function update() {
 }
 
 function reset() {
-  health = 100
-  document.getElementById("health-status").innerText = health.toString()
+  evilHamburger.health = 100
+  document.getElementById("health-status").innerText = evilHamburger.health.toString()
+  document.getElementById("end-game").innerText = ""
 }
 function endGame() {
-  if (health <= 0) {
-    document.getElementById("end-game").innerText = ""
+  if (evilHamburger.health <= 0) {
+    evilHamburger.health = 0
+    document.getElementById("end-game").innerText = "Game Over"
   }
 }
