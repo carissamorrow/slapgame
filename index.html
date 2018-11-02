@@ -14,19 +14,36 @@
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="game.css">
+
+  <span><span id="health"></span></span>
 </head>
 
 <body>
+
+  <div class="container">
+    <div class="row" style=background-color:red>
+      <div class="col-md-12" id="hamburger-interface">
+        <img src="https://static1.fjcdn.com/comments/I+havent+had+a+mcdonalds+burger+in+at+least+3+_e83fd1ea7af4ab5f68ca0c6ef7d948d0.jpg"
+          alt="">
+      </div>
+    </div>
+  </div>
+  </div>
+
   <script src="game.js"></script>
 
   <div>
-    <img src="http://placehold.it/200x200" alt=""></div>
 
+    <div class="row attack-buttons">
+      <button onclick="app.controllers.slapController.attack(0, 'punch')" type="button" class="btn btn-secondary">Punch</button>
+      <button onclick="app.controllers.slapController.attack(0, 'slap')" type="button" class="btn btn-secondary">Slap</button>
+      <button onclick="app.controllers.slapController.attack(0, 'kick')" type="button" class="btn btn-secondary">Kick</button>
 </body>
 
 <footer>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <button onclick="Slap" </button </div> </div> </div> </footer> </html>
+
+
+</footer>
+
+</html>
