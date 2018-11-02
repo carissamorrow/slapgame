@@ -25,14 +25,6 @@ function punch() {
 }
 
 function kick() {
-  if (health >= 20) {
-    health -= 20
-    document.getElementById("health-status").innerText = health.toString()
-  }
-  endGame();
-}
-
-function slap() {
   if (health >= 10) {
     health -= 10
     document.getElementById("health-status").innerText = health.toString()
@@ -40,19 +32,33 @@ function slap() {
   endGame();
 }
 
+function slap() {
+  if (health >= 20) {
+    health -= 20
+    document.getElementById("health-status").innerText = health.toString()
+  }
+  endGame();
+}
+
 function tomato() {
-  health += 10
-  document.getElementById("health-status").innerText = health.toString()
+  if (health < 100) {
+    health += 5
+    document.getElementById("health-status").innerText = health.toString()
+  }
 }
 
 function onion() {
-  health += 5
-  document.getElementById("health-status").innerText = health.toString()
+  if (health < 99) {
+    health += 10
+    document.getElementById("health-status").innerText = health.toString()
+  }
 }
 
 function lettuce() {
-  health += 4
-  document.getElementById("health-status").innerText = health.toString()
+  if (health < 99) {
+    health += 10
+    document.getElementById("health-status").innerText = health.toString()
+  }
 }
 
 function update() {
@@ -65,6 +71,6 @@ function reset() {
 }
 function endGame() {
   if (health <= 0) {
-    document.getElementById("end-game").innerText = "end game"
+    document.getElementById("end-game").innerText = ""
   }
 }
