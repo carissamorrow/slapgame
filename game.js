@@ -53,7 +53,8 @@ function update() {
 
 function reset() {
   evilHamburger.health = 100
-  document.getElementById("health-status").innerText = evilHamburger.health.toString()
+  document.getElementById("health-status").innerText =
+    evilHamburger.health.toString()
   document.getElementById("end-game").innerText = ""
 }
 function endGame() {
@@ -61,4 +62,5 @@ function endGame() {
     evilHamburger.health = 0
     document.getElementById("end-game").innerText = "Game Over"
   }
+
 }
