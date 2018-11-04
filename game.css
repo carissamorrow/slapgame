@@ -36,5 +36,11 @@ margin-left: 600px;
   width: 300px;
 }
 
-
+.headernames {
+  position: absolute;
+  bottom: 90px;
+  margin-left: 600px;
+  font-size: 40px;
+  font-style: italic;
+}
 
