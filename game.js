@@ -19,17 +19,35 @@ function totalItems() {
 }
 
 function punch() {
-  evilHamburger.health -= 20 + totalItems()
+  let mod = totalItems()
+  if (mod > -20) {
+    evilHamburger.health -= 20 + mod
+  }
+  else {
+    alert("HE HAS BECOME TOO STRONG!!!!")
+  }
   update();
 }
 
 function kick() {
-  evilHamburger.health -= 10 + totalItems()
-  update()
+  let mod = totalItems()
+  if (mod > -10) {
+    evilHamburger.health -= 10 + mod
+  }
+  else {
+    alert("HE HAS BECOME TOO STRONG!!!!")
+  }
+  update();
 }
 
 function slap() {
-  evilHamburger.health -= 20 + totalItems()
+  let mod = totalItems()
+  if (mod > -20) {
+    evilHamburger.health -= 20 + mod
+  }
+  else {
+    alert("HE HAS BECOME TOO STRONG!!!!")
+  }
   update();
 }
 
