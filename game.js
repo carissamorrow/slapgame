@@ -49,6 +49,7 @@ function lettuce() {
 function update() {
   endGame();
   document.getElementById("health-status").innerText = evilHamburger.health.toString()
+  document.getElementById("progressbar").style.width = evilHamburger.health.toString() + "px"
 }
 
 function reset() {
@@ -56,6 +57,7 @@ function reset() {
   document.getElementById("health-status").innerText =
     evilHamburger.health.toString()
   document.getElementById("end-game").innerText = ""
+  document.getElementById("progressbar").style.width = evilHamburger.health.toString() + "px"
 }
 function endGame() {
   if (evilHamburger.health <= 0) {
